@@ -73,7 +73,7 @@ class MainController extends Controller
 
         $data = [
             'Page'           => 'f-dashboard.dashboard',
-            'Title'          => 'ECSA-HC  elearning  Dashboard ',
+            'Title'          => 'ECSA-HC  Digital Academy  Dashboard ',
             'Desc'           => 'Student Account',
             "TotalAttempted" => $PostTestsAttempted + $ModularTestsAttempted + $PracticalTestsAttempted,
             "Courses"        => $Courses,

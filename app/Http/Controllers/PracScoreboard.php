@@ -32,15 +32,20 @@ class PracScoreboard extends Controller
             ->where('score', 'pass')
             ->count();
 
-        // dd();
-
-        $data = [
-            "score"     => ($PracPassed / $PracTotalScore) * 100,
-            "Attempted" => $PracAttempted,
-            "Total"     => $TotalPrac * 10,
-        ];
-
-        return $data;
+            if ($PracPassed < 1) {
+                $score = 1;
+            } else {
+    
+                $score = ($PracPassed / $PracTotalScore) * 100;
+            }
+    
+            $data = [
+                "score"     => $score,
+                "Attempted" => $PracAttempted,
+                "Total"     => $TotalPrac * 10,
+            ];
+    
+            return $data;
 
     }
 }

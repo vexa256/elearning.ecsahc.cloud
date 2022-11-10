@@ -28,7 +28,7 @@
                     <div class="flex-grow-1 mt-4">
                         <h5 class="mb-1 fs-15"><a
                                 href="apps-projects-overview.html"
-                                class="text-dark">Presentation Notes</a>
+                                class="text-dark">Course Videos</a>
                         </h5>
                         <p class="text-muted text-truncate-two-lines mb-3">
                             Explore the video format

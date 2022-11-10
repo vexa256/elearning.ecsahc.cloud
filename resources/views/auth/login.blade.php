@@ -19,14 +19,11 @@
                         <!--end::Logo-->
                         <!--begin::Title-->
                         <h1 class="fw-bolder text-light fs-2qx pb-3 pb-md-10">
-                            ECSA-HC Elearning Platform</h1>
+                            ECSA-HC Digital Academy</h1>
                         <!--end::Title-->
                         <!--begin::Description-->
                         <p class=" fw-bolder fs-6 text-light">
-                            Vision :
-                            To be the leader in health in East, Central and Southern Africa, contributing towards the
-                            attainment of the
-                            highest standard of physical, mental and social well-being of the people in the region.
+                           Regional Capacity Building Platform
                             <br />
                         </p>
                         <!--end::Description-->
@@ -53,7 +50,7 @@
                             <!--begin::Heading-->
                             <div class="text-center mb-10">
                                 <!--begin::Title-->
-                                <h1 class="text-dark mb-3">ECSAH-HC Elearning Sign In
+                                <h1 class="text-dark mb-3">ECSAH-HC Digital Academy Sign In
                                 </h1>
 
                             </div>

@@ -15,8 +15,8 @@
             <div class="row align-items-end">
                 <div class="col-sm-8">
                     <div class="p-3">
-                        <p class="fs-16 lh-base text-white">Welcom to the
-                            ECSA-HC Regional Elearning Platform
+                        <p class="fs-16 lh-base text-white">Welcome to the
+                            ECSA-HC Regional Digital Academy
                             <span class="fw-semibold"> <i
                                     class="mdi mdi-arrow-right"></i>
                         </p>
