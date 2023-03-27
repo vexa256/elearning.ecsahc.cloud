@@ -1,0 +1,31 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.a948125b.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_index.83bc9570.js"
+    ]
+  },
+  "compiler/compiler.js": {
+    "file": "assets/compiler.d6a527a1.js",
+    "src": "compiler/compiler.js",
+    "isEntry": true,
+    "imports": [
+      "_index.83bc9570.js"
+    ]
+  },
+  "_index.83bc9570.js": {
+    "file": "assets/index.83bc9570.js"
+  },
+  "compiler/compiler.css": {
+    "file": "assets/compiler.85ae0eb2.css",
+    "src": "compiler/compiler.css",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.0be2610e.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  }
+}

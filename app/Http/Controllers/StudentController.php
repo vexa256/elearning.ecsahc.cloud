@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\AttemptPreTestController;
-use App\Http\Controllers\FormEngine;
-use App\Http\Controllers\StudentScoreBoardController;
-use Auth;
 use DB;
+use Auth;
 use Illuminate\Http\Request;
+use App\Http\Controllers\FormEngine;
 use Illuminate\Support\Facades\Cache;
+use App\Http\Controllers\AttemptPreTestController;
+use App\Http\Controllers\StudentScoreBoardController;
 
 class StudentController extends Controller
 {
@@ -215,7 +215,14 @@ class StudentController extends Controller
             ->join('courses AS C', 'C.CID', 'M.CID')
             ->where('M.CID', $Courses->CID)
             ->select('M.*', 'C.Course', 'C.id AS CourseID')
+            ->orderBy('M.Module', 'asc')
             ->get();
+        // $Modules = DB::table('modules AS M')
+        //     ->join('courses AS C', 'C.CID', 'M.CID')
+        //     ->where('M.CID', $Courses->CID)
+        //     ->select('M.*', 'C.Course', 'C.id AS CourseID')
+        //     ->orderBy('M.id', 'desc')
+        //     ->get();
 
         // $PreTestStatus = Auth::user()->role;
 

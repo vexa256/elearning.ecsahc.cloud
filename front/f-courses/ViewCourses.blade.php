@@ -1,89 +1,36 @@
 @isset($Courses)
     @foreach ($Courses as $data)
-        <div class="card product shadow-lg">
-            <div class="card-header align-items-center d-flex">
-                <h4 class="card-title mb-0 fw-bolder flex-grow-1">
-                    #CN-EC{{ $data->id * 9 }}
-                </h4>
-
-
-            </div>
-            <div class="card-body">
-                <div class="row gy-3">
-                    <div class="col-sm-auto">
-                        <div class="avatar-xl bg-light rounded p-1">
-                            <img src="{{ asset('assets/data/' . $data->CourseThumbnail) }}"
-                                alt="" class="img-fluid d-block">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <h5 class="fs-20 text-truncate"><a href="#"
-                                class="text-dark">{{ $data->Course }}</a></h5>
-                        <ul class="list-inline text-primary">
-                            <li class="list-inline-item">
-                                {{ $data->VeryBriefDescription }}</li>
-
-                        </ul>
-
-
-                    </div>
-
+        <div class="card shadow-lg">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ asset('assets/data/' . $data->CourseThumbnail) }}"
+                        alt="{{ $data->Course }}" class="img-fluid">
                 </div>
-            </div>
-            <!-- card body -->
-            <div class="card-footer bg-soft-warning shadow-lg">
-                <div class="row align-items-center gy-3">
-                    <div class="col-sm">
-                        <div class="d-flex flex-wrap my-n1">
-                            <div>
-
-                                @if ($data->role == 'Incomplete')
-                                    <a data-bs-toggle="modal" href="#NewApp"
-                                        class="d-block  btn-lg  text-light fw-bolder btn btn-primary p-1 px-2"><i
-                                            class="  ri-calendar-check-fill
-                                    text-light fw-bolder align-bottom me-1"></i>
-                                        Complete Registration</a>
-                                    {{-- @elseif (Auth::user()->role == 'PreTest') --}}
-                                    {{-- @elseif ($data->role == 'PreTest')
-                                    <a href="{{ route('Explore', ['id' => $data->id]) }}"
-                                        class="d-block  btn-lg  text-light fw-bolder btn btn-primary p-1 px-2"><i
-                                            class="  ri-calendar-check-fill
-                                text-light fw-bolder align-bottom me-1"></i>
-                                        Attempt Pre-Test</a> --}}
-                                @else
-                                    <a href="{{ route('Explore', ['id' => $data->id]) }}"
-                                        class="d-block  btn-lg  text-light fw-bolder btn btn-danger shadow-lg p-1 px-2"><i
-                                            class="  ri-calendar-check-fill
-                                    text-light fw-bolder align-bottom me-1"></i>
-                                        Start the course</a>
-                                @endif
-
-
-                            </div>
-                            <div>
-                                <a data-doc="  {{ $data->Course }} ({{ $data->VeryBriefDescription }})"
-                                    data-source="{{ asset('assets/data/' . $data->CoursePresentation) }}"
-                                    data-bs-toggle="modal" href="#FPdfJS"
-                                    class="d-block FPdfJS btn-lg  text-light fw-bolder btn btn-success ms-3 p-1 px-2"><i
-                                        class="   ri-questionnaire-fill
-
-                                        text-light fw-bolder align-bottom me-1"></i>
-                                    About Course</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-auto">
-                        <div
-                            class="d-flex align-items-center gap-2 text-primary fw-bolder">
-                            <div>Course Operator :</div>
-                            <h5 class="fs-14 mb-0"><span
-                                    class="product-line-price text-primary">{{ $data->Title }}</span>
-                            </h5>
-                        </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $data->Course }}</h5>
+                        <p class="card-text">{{ $data->VeryBriefDescription }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">Course Operator:
+                                {{ $data->Title }}</small>
+                        </p>
+                        <a href="{{ route('Explore', ['id' => $data->id]) }}"
+                            class="btn btn-primary">
+                            @if ($data->role == 'Incomplete')
+                                Complete Registration
+                            @else
+                                Start the course
+                            @endif
+                        </a>
+                        <a data-doc="{{ $data->Course }} ({{ $data->VeryBriefDescription }})"
+                            data-source="{{ asset('assets/data/' . $data->CoursePresentation) }}"
+                            data-bs-toggle="modal" href="#FPdfJS"
+                            class="btn btn-success FPdfJS">
+                            About Course
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- end card footer -->
         </div>
     @endforeach
 @endisset
